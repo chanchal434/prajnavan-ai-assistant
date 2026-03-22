@@ -1,0 +1,460 @@
+/* =========================================
+   1. IMPORTS & GLOBAL STYLES
+   ========================================= */
+/* Google Fonts: Exo 2 for a futuristic/tech look */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* Modern vignette background */
+    background: radial-gradient(circle at center, #2b2b2b 0%, #1a1a1a 100%);
+    color: #eee;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 10px 0; font-weight: 200; }
+p { margin: 0; line-height: 1.5; font-weight: 200; }
+a { color: #00aaee; text-decoration: none; }
+a:hover { color: #0077a2; text-decoration: underline; }
+
+.container {
+    max-width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* =========================================
+   2. JARVIS HOOD ANIMATIONS
+   ========================================= */
+.square {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#6b72ff00 50%, #000dff3b 40%);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate1 6s linear infinite;
+}
+
+.square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#6b72ff00 50%, #000dff3b 40%);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate2 4s linear infinite;
+}
+
+.square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#6b72ff00 50%, #000dff3b 40%);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate3 8s linear infinite;
+}
+
+@keyframes animate1 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes animate2 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes animate3 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =========================================
+   3. INPUT FIELD (GLASSMORPHISM)
+   ========================================= */
+#textInput {
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px; /* Modern Pill Shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    margin: 0px 15%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#textInput:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 170, 238, 0.3); /* Blue glow on hover */
+    border-color: rgba(0, 170, 238, 0.5);
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   4. BUTTONS (NEON + LISTENING MODE)
+   ========================================= */
+.glow-on-hover {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 50%;
+    padding: 0px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+/* Rainbow Neon Effect */
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 50%;
+}
+
+.glow-on-hover:active { color: #181818a8; }
+.glow-on-hover:active:after { background: transparent; }
+.glow-on-hover:hover:before { opacity: 1; }
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0; top: 0;
+    border-radius: 50%;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Red Pulse for Microphone when listening */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 82, 82, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 82, 82, 0); }
+}
+
+.listening-mode {
+    color: #ff5252 !important;
+    animation: pulse-red 1.5s infinite;
+    border: 1px solid #ff5252 !important;
+}
+
+/* =========================================
+   5. HAMBURGER MENU (SLIDING)
+   ========================================= */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    z-index: 1060;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.hamburger-menu:hover {
+    color: #00aaee;
+    transform: scale(1.1);
+}
+
+.hamburger-menu:focus { outline: none; }
+
+/* Class added via JS */
+.hamburger-menu.slide-right {
+    left: 410px; /* Move to right of sidebar */
+    transform: rotate(90deg);
+    color: #ED303C;
+}
+
+@media (max-width: 500px) {
+    .hamburger-menu.slide-right { left: 300px; }
+}
+
+/* =========================================
+   6. CHAT HISTORY SIDEBAR
+   ========================================= */
+.chat-canvas {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+    width: 400px;
+}
+
+.receiver_message {
+    padding: 15px;
+    border: 1px solid #00aaee;
+    border-radius: 0px 15px 15px 20px;
+    width: auto;
+    color: white;
+    background-color: rgba(0, 170, 238, 0.1);
+    font-family: 'Exo 2', sans-serif;
+    word-wrap: break-word;
+}
+
+.sender_message {
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 15px 15px 0px 20px;
+    width: auto;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-family: 'Exo 2', sans-serif;
+    word-wrap: break-word;
+}
+
+.width-size {
+    max-width: 90%;
+    width: auto;
+}
+
+/* CODE BLOCK STYLING */
+.receiver_message pre {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.receiver_message code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    color: #f8f8f2;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   7. SIRIWAVE (ACTIVE) UI
+   ========================================= */
+.siri-wave-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    max-height: 100vh;
+}
+
+.message-center-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* FIX: Increased top padding to 140px to Force Clear the Top Menu Button */
+    padding: 140px 20px 20px 20px; 
+    position: relative;
+    z-index: 2;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.siri-message-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+.siri-message {
+    font-size: 24px !important;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.05); /* Glassy */
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    
+    /* FIX: Restrict width to 85% to stay away from corners */
+    max-width: 85%;
+    /* FIX: Height constraint to ensure it fits in the new area */
+    max-height: 60vh;
+    
+    overflow-y: auto;
+    color: #fff;
+    white-space: pre-line;
+}
+
+.siri-wave-visualization {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+#siri-container {
+    width: 100% !important;
+    max-width: 800px !important;
+    height: 180px !important;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00aaee; }
+
+/* View Control */
+#SiriWave {
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: black;
+    z-index: 1000;
+}
+
+body.siriwave-active { overflow: hidden; }
+
+#SiriWave[hidden] {
+    pointer-events: none;
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Layout Z-Index */
+#Oval { z-index: 1001; position: relative; }
+#textInput { z-index: 1002; position: relative; }
+#canvasOne { z-index: 1; }
+#JarvisHood { position: relative; z-index: 2; }
+
+/* Utility Classes */
+.glass-effect {
+    background: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgb(25, 0, 255);
+}
+.svg-frame {
+    position: relative;
+    width: 455px; height: 455px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center; align-items: center;
+    animation: change-view 2s ease-in infinite;
+}
+
+/* ... Previous styles ... */
+
+/* =========================================
+   NEW: STOP BUTTON & CONTAINER
+   ========================================= */
+
+.siri-stop-btn-container {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1050; /* Above the wave canvas */
+}
+
+/* Red Glow Button Style */
+.glow-red {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    color: #ff5252;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    padding: 8px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.glow-red:hover {
+    background: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    transform: scale(1.05);
+    color: white;
+}
+
+.glow-red:active {
+    transform: scale(0.95);
+}
+
+.glow-red i {
+    font-size: 1.4rem;
+}
