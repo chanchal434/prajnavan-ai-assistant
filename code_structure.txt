@@ -1,0 +1,32 @@
+AV_CHATBOT/
+│
+├── main.py
+├── Prajñāvan.db
+│
+├── engine/
+│   ├── command.py
+│   ├── config.py
+│   ├── db.py
+│   ├── features.py
+│   ├── helper.py
+│   └── huggingface_cookies.json
+│
+├── www/
+│   ├── assets/
+│   │   ├── audio/
+│   │   ├── images/
+│   │   │
+│   │   ├── vendor/
+│   │   │   └── textillate/
+│   │   │       ├── animate.css
+│   │   │       ├── controller.css
+│   │   │       ├── jquery.fittext.js
+│   │   │       ├── jquery.lettering.js
+│   │   │       └── style.css
+│   │
+│   ├── index.html
+│   ├── main.js
+│   ├── script.js
+│   └── style.css
+│
+└── README.md

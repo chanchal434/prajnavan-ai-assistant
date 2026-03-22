@@ -1,0 +1,6 @@
+Eel
+SpeechRecognition
+pyttsx3
+hugchat
+playsound==1.2.2
+PyAudio
