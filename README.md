@@ -106,10 +106,10 @@ python main.py
 prajnavan-ai-assistant/
 │
 ├── backend/
-│   ├── main.py
-│   ├── features.py
-│   ├── commands.py
-│   └── database.py
+│   ├── main.py  # main file for run project
+│   ├── features.py 
+│   ├── commands.py 
+│   └── database.py 
 │
 ├── frontend/
 │   ├── index.html
