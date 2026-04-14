@@ -20,7 +20,7 @@ def start():
     try:
         eel.start("index.html", mode=None, host='localhost', block=True)
     except (SystemExit, KeyboardInterrupt):
-        print("Prajñāvan shutting down...")
+        print("Prajñāvan AI is shutting down...")
 
 if __name__ == '__main__':
     start()
