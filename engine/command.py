@@ -32,7 +32,7 @@ def takecommand():
             eel.onError({"status": "error", "message": "No speech detected."})
             return "ERROR_TIMEOUT"
         except sr.UnknownValueError:
-            eel.onError({"status": "error", "message": "Could not understand audio."})
+            eel.onError({"status": "error", "message": "Could not understand audio. Please Try Again..."})
             return "ERROR_RECOGNITION"
         except Exception as e:
             eel.onError({"status": "error", "message": str(e)})
@@ -62,7 +62,7 @@ def process_logic(message):
 
             # Logic Routing
             if any(phrase in qlower for phrase in ("who are you", "tell me about yourself", "who made you")):
-                response = f"I am {ASSISTANT_NAME}, an AI agent created by Anannay Varshney."
+                response = f"I am {ASSISTANT_NAME}, an AI agent created by Anannay Varshney(AV)."
                 eel.receiverText(response)
                 speak(response)
             
