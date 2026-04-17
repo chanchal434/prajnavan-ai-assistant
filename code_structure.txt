@@ -9,7 +9,6 @@ AV_CHATBOT/
 │   ├── db.py
 │   ├── features.py
 │   ├── helper.py
-│   └── huggingface_cookies.json
 │
 ├── www/
 │   ├── assets/
