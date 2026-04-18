@@ -1,5 +1,5 @@
-Eel
-SpeechRecognition
+Eel==2.3.0
+SpeechRecognition=1.4.2
 pyttsx3
 hugchat
 playsound==1.2.2
