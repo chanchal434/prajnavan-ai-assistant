@@ -22,7 +22,8 @@ The project is built using a **full-stack architecture** combining Python backen
 - 🌐 Web-based Interactive UI
 - 🎨 Real-time animations and visual feedback
 - 🧠 Context-aware AI responses
-- 🌍 Multilingual support (basic)
+- 🌍 Multilingual support
+- 👩‍🦰 User Friendly
 
 ---
 
