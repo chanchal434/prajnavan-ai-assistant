@@ -9,7 +9,7 @@ An AI-powered virtual assistant chatbot with voice interaction, NLP, and system 
 **Prajñāvan** is an intelligent conversational assistant designed to provide human-like, context-aware interactions.  
 It integrates **Natural Language Processing (NLP)**, **voice recognition**, and **system automation** to create a powerful and interactive AI assistant.
 
-The project is built using a **full-stack architecture** combining Python backend with a modern web-based frontend.
+The project is built using a **full-stack architecture** and **Computational process ** combining Python backend with a modern web-based frontend.
 
 ---
 
