@@ -1,6 +1,6 @@
 # 🧠 Prajñāvan – AI Powered Virtual Assistant
 
-An AI-powered virtual assistant chatbot with voice interaction, NLP, and system automation capabilities.
+An AI-powered virtual AI Assistant chatbot with voice interaction, NLP, and system automation capabilities.
 
 ---
 
