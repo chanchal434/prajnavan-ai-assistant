@@ -1,4 +1,4 @@
-AV_CHATBOT/
+CHATBOT/
 │
 ├── main.py
 │
