@@ -18,8 +18,6 @@ CHATBOT/
 │   │   │   └── textillate/
 │   │   │       ├── animate.css
 │   │   │       ├── controller.css
-│   │   │       ├── jquery.fittext.js
-│   │   │       ├── jquery.lettering.js
 │   │   │       └── style.css
 │   │
 │   ├── index.html
