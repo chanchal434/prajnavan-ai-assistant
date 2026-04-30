@@ -19,5 +19,10 @@ CHATBOT/
 │   │   │       ├── animate.css
 │   │   │       ├── controller.css
 │   │   │       └── style.css
+│   │
+│   ├── index.html
+│   ├── main.js
+│   ├── script.js
+│   └── style.css
 │
 └── README.md
