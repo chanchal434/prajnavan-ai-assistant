@@ -27,7 +27,7 @@ The project is built using a **full-stack architecture** and **Computational pro
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Tech Stack and Technology
 
 ### 🔹 Backend
 - Python
